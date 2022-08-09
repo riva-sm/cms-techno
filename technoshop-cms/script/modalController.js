@@ -1,3 +1,6 @@
+//import { preview } from "./elems.js";
+import { hidePreview } from "./previewController.js";
+
 // открытие модального окна
 const openModal = (modal, classOpen) => {
   modal.classList.add(classOpen);
@@ -16,6 +19,7 @@ export const modalController = ({ modal, btn, classOpen, classClose }) => {
   modal.addEventListener("click", ({ target }) => {
     if (target === modal || target.classList.contains(classClose)) {
       closeModal(modal, classOpen);
+      hidePreview(); // удаляем изображение после закрытия модального окна
     }
   });
 };

@@ -53,7 +53,7 @@ export const fillingForm = async (id) => {
     await getGoods(id);
   form.title.value = title;
   form.category.value = category;
-  form.description.value = description;
+  form.description.value = description.join("\n");
   form.display.value = display;
   form.price.value = price;
   form.imagesave.value = image;

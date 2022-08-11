@@ -2,7 +2,7 @@ import { form, preview } from "./elems.js";
 import { toBase64 } from "./utils.js";
 
 // отображаем изображение после загрузки
-const showPreview = (src) => {
+export const showPreview = (src) => {
   preview.style.display = "block";
   preview.src = src;
 };

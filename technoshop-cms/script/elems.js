@@ -4,3 +4,5 @@ export const form = document.querySelector(".modal-content"); // получае�
 export const preview = document.querySelector(".preview"); // превью изображения
 export const tableGoods = document.querySelector(".table-goods"); // получаем тело таблицы с товарами
 export const category = document.querySelector("#category"); // категория
+export const modalTitle = document.querySelector(".modal-title"); // заголовок модального окна
+export const modalSubmitBtn = document.querySelector(".modal-submit-btn"); // кнопка добавить товар

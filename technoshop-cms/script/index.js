@@ -8,10 +8,7 @@ import { tableController } from "./tableController.js";
 const init = () => {
   // контроллер модального окна
   modalController({
-    modal,
     btn: modalBtn,
-    classOpen: "d-block",
-    classClose: "btn-close",
   });
   // контроллер превью загруженного изображения
   previewController();

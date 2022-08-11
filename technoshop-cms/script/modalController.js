@@ -1,4 +1,4 @@
-import { modalInputs } from "./elems.js";
+import { form } from "./elems.js";
 import { hidePreview } from "./previewController.js";
 
 // открытие модального окна
@@ -8,13 +8,8 @@ const openModal = (modal, classOpen) => {
 // закрытие модального окна
 const closeModal = (modal, classOpen) => {
   modal.classList.remove(classOpen);
-};
-
-// очищаем поля формы
-const resetInputs = () => {
-  modalInputs.forEach((input) => {
-    input.value = "";
-  });
+  form.reset(); // очищаем поля формы
+  hidePreview(); // удаляем изображение
 };
 
 export const modalController = ({ modal, btn, classOpen, classClose }) => {
@@ -26,8 +21,6 @@ export const modalController = ({ modal, btn, classOpen, classClose }) => {
   modal.addEventListener("click", ({ target }) => {
     if (target === modal || target.classList.contains(classClose)) {
       closeModal(modal, classOpen);
-      hidePreview(); // удаляем изображение после закрытия модального окна
-      resetInputs(); // очищаем поля формы после закрытия модального окна
     }
   });
 };

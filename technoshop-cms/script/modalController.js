@@ -14,6 +14,8 @@ const openModal = (id) => {
 export const closeModal = () => {
   modal.classList.remove("d-block");
   form.reset(); // очищаем поля формы
+  form.identificator.value = ""; // очищаем скрытое поле идентификатора
+  form.imagesave.value = ""; // очищаем скрытое поле с изображением
   hidePreview(); // удаляем изображение
 };
 

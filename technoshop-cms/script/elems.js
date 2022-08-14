@@ -6,3 +6,4 @@ export const tableGoods = document.querySelector(".table-goods"); // получ�
 export const category = document.querySelector("#category"); // категория
 export const modalTitle = document.querySelector(".modal-title"); // заголовок модального окна
 export const modalSubmitBtn = document.querySelector(".modal-submit-btn"); // кнопка добавить товар
+export const wrapperSort = document.querySelector(".wrapper-sort"); // строка сортировки
